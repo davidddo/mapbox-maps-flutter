@@ -262,6 +262,7 @@ class PointAnnotation {
     this.textHaloColor,
     this.textHaloWidth,
     this.textOpacity,
+    this.data,
   });
 
   /// The id for annotation
@@ -352,6 +353,9 @@ class PointAnnotation {
   /// The opacity at which the text will be drawn.
   double? textOpacity;
 
+  /// Properties associated with the annotation.
+  Map<String?, Object?>? data;
+
   Object encode() {
     return <Object?>[
       id,
@@ -383,6 +387,7 @@ class PointAnnotation {
       textHaloColor,
       textHaloWidth,
       textOpacity,
+      data,
     ];
   }
 
@@ -422,6 +427,7 @@ class PointAnnotation {
       textHaloColor: result[26] as int?,
       textHaloWidth: result[27] as double?,
       textOpacity: result[28] as double?,
+      data: (result[29] as Map<Object?, Object?>?)?.cast<String?, Object?>(),
     );
   }
 }
@@ -456,6 +462,7 @@ class PointAnnotationOptions {
     this.textHaloColor,
     this.textHaloWidth,
     this.textOpacity,
+    this.data,
   });
 
   /// The geometry that determines the location/shape of this annotation
@@ -543,6 +550,9 @@ class PointAnnotationOptions {
   /// The opacity at which the text will be drawn.
   double? textOpacity;
 
+  /// Properties associated with the annotation.
+  Map<String?, Object?>? data;
+
   Object encode() {
     return <Object?>[
       geometry,
@@ -573,6 +583,7 @@ class PointAnnotationOptions {
       textHaloColor,
       textHaloWidth,
       textOpacity,
+      data,
     ];
   }
 
@@ -610,13 +621,15 @@ class PointAnnotationOptions {
       textHaloBlur: result[24] as double?,
       textHaloColor: result[25] as int?,
       textHaloWidth: result[26] as double?,
-      textOpacity: result[27] as double?,
+      textOpacity: result[28] as double?,
+      data: (result[29] as Map<Object?, Object?>?)?.cast<String?, Object?>(),
     );
   }
 }
 
 class _OnPointAnnotationClickListenerCodec extends StandardMessageCodec {
   const _OnPointAnnotationClickListenerCodec();
+
   @override
   void writeValue(WriteBuffer buffer, Object? value) {
     if (value is PointAnnotation) {
@@ -671,6 +684,7 @@ abstract class OnPointAnnotationClickListener {
 
 class __PointAnnotationMessagerCodec extends StandardMessageCodec {
   const __PointAnnotationMessagerCodec();
+
   @override
   void writeValue(WriteBuffer buffer, Object? value) {
     if (value is PointAnnotation) {
