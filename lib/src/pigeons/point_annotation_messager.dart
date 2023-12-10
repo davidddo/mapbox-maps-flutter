@@ -262,7 +262,7 @@ class PointAnnotation {
     this.textHaloColor,
     this.textHaloWidth,
     this.textOpacity,
-    this.data,
+    this.userInfo,
   });
 
   /// The id for annotation
@@ -354,7 +354,7 @@ class PointAnnotation {
   double? textOpacity;
 
   /// Properties associated with the annotation.
-  Map<String?, Object?>? data;
+  Map<String?, Object?>? userInfo;
 
   Object encode() {
     return <Object?>[
@@ -387,7 +387,7 @@ class PointAnnotation {
       textHaloColor,
       textHaloWidth,
       textOpacity,
-      data,
+      userInfo,
     ];
   }
 
@@ -427,7 +427,7 @@ class PointAnnotation {
       textHaloColor: result[26] as int?,
       textHaloWidth: result[27] as double?,
       textOpacity: result[28] as double?,
-      data: (result[29] as Map<Object?, Object?>?)?.cast<String?, Object?>(),
+      userInfo: (result[29] as Map<Object?, Object?>?)?.cast<String?, Object?>(),
     );
   }
 }
@@ -462,7 +462,7 @@ class PointAnnotationOptions {
     this.textHaloColor,
     this.textHaloWidth,
     this.textOpacity,
-    this.data,
+    this.userInfo,
   });
 
   /// The geometry that determines the location/shape of this annotation
@@ -551,7 +551,7 @@ class PointAnnotationOptions {
   double? textOpacity;
 
   /// Properties associated with the annotation.
-  Map<String?, Object?>? data;
+  Map<String?, Object?>? userInfo;
 
   Object encode() {
     return <Object?>[
@@ -583,7 +583,7 @@ class PointAnnotationOptions {
       textHaloColor,
       textHaloWidth,
       textOpacity,
-      data,
+      userInfo,
     ];
   }
 
@@ -622,7 +622,7 @@ class PointAnnotationOptions {
       textHaloColor: result[25] as int?,
       textHaloWidth: result[26] as double?,
       textOpacity: result[28] as double?,
-      data: (result[29] as Map<Object?, Object?>?)?.cast<String?, Object?>(),
+      userInfo: (result[29] as Map<Object?, Object?>?)?.cast<String?, Object?>(),
     );
   }
 }

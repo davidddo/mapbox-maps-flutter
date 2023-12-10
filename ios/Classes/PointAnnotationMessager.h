@@ -319,7 +319,7 @@ typedef NS_ENUM(NSUInteger, FLTTextTranslateAnchor) {
     textHaloColor:(nullable NSNumber *)textHaloColor
     textHaloWidth:(nullable NSNumber *)textHaloWidth
     textOpacity:(nullable NSNumber *)textOpacity
-    data:(nullable NSDictionary<NSString *, id> *)data;
+    userInfo:(nullable NSDictionary<NSString *, id> *)userInfo;
 /// The id for annotation
 @property(nonatomic, copy) NSString * id;
 /// The geometry that determines the location/shape of this annotation
@@ -379,7 +379,7 @@ typedef NS_ENUM(NSUInteger, FLTTextTranslateAnchor) {
 @property(nonatomic, strong, nullable) NSNumber * textHaloWidth;
 /// The opacity at which the text will be drawn.
 @property(nonatomic, strong, nullable) NSNumber * textOpacity;
-@property(nonatomic, strong, nullable) NSDictionary<NSString *, id> * data;
+@property(nonatomic, strong, nullable) NSDictionary<NSString *, id> * userInfo;
 @end
 
 @interface FLTPointAnnotationOptions : NSObject
@@ -411,7 +411,7 @@ typedef NS_ENUM(NSUInteger, FLTTextTranslateAnchor) {
     textHaloColor:(nullable NSNumber *)textHaloColor
     textHaloWidth:(nullable NSNumber *)textHaloWidth
     textOpacity:(nullable NSNumber *)textOpacity
-    data:(nullable NSDictionary<NSString *, id> *)data;
+    userInfo:(nullable NSDictionary<NSString *, id> *)userInfo;
 /// The geometry that determines the location/shape of this annotation
 @property(nonatomic, strong, nullable) NSDictionary<NSString *, id> * geometry;
 /// The bitmap image for this Annotation
@@ -469,7 +469,7 @@ typedef NS_ENUM(NSUInteger, FLTTextTranslateAnchor) {
 @property(nonatomic, strong, nullable) NSNumber * textHaloWidth;
 /// The opacity at which the text will be drawn.
 @property(nonatomic, strong, nullable) NSNumber * textOpacity;
-@property(nonatomic, strong, nullable) NSDictionary<NSString *, id> * data;
+@property(nonatomic, strong, nullable) NSDictionary<NSString *, id> * userInfo;
 @end
 
 /// The codec used by FLTOnPointAnnotationClickListener.

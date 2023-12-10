@@ -233,7 +233,7 @@ static id GetNullableObjectAtIndex(NSArray *array, NSInteger key) {
     textHaloColor:(nullable NSNumber *)textHaloColor
     textHaloWidth:(nullable NSNumber *)textHaloWidth
     textOpacity:(nullable NSNumber *)textOpacity
-    data:(nullable NSDictionary<NSString *, id> *)data {
+    userInfo:(nullable NSDictionary<NSString *, id> *)userInfo {
   FLTPointAnnotation* pigeonResult = [[FLTPointAnnotation alloc] init];
   pigeonResult.id = id;
   pigeonResult.geometry = geometry;
@@ -264,7 +264,7 @@ static id GetNullableObjectAtIndex(NSArray *array, NSInteger key) {
   pigeonResult.textHaloColor = textHaloColor;
   pigeonResult.textHaloWidth = textHaloWidth;
   pigeonResult.textOpacity = textOpacity;
-  pigeonResult.data = data;
+  pigeonResult.userInfo = userInfo;
   return pigeonResult;
 }
 + (FLTPointAnnotation *)fromList:(NSArray *)list {
@@ -307,7 +307,7 @@ static id GetNullableObjectAtIndex(NSArray *array, NSInteger key) {
   pigeonResult.textHaloColor = GetNullableObjectAtIndex(list, 26);
   pigeonResult.textHaloWidth = GetNullableObjectAtIndex(list, 27);
   pigeonResult.textOpacity = GetNullableObjectAtIndex(list, 28);
-  pigeonResult.data = GetNullableObjectAtIndex(list, 29);
+  pigeonResult.userInfo = GetNullableObjectAtIndex(list, 29);
   return pigeonResult;
 }
 + (nullable FLTPointAnnotation *)nullableFromList:(NSArray *)list {
@@ -344,7 +344,7 @@ static id GetNullableObjectAtIndex(NSArray *array, NSInteger key) {
     (self.textHaloColor ?: [NSNull null]),
     (self.textHaloWidth ?: [NSNull null]),
     (self.textOpacity ?: [NSNull null]),
-    (self.data ?: [NSNull null]),
+    (self.userInfo ?: [NSNull null]),
   ];
 }
 @end
@@ -378,7 +378,7 @@ static id GetNullableObjectAtIndex(NSArray *array, NSInteger key) {
     textHaloColor:(nullable NSNumber *)textHaloColor
     textHaloWidth:(nullable NSNumber *)textHaloWidth
     textOpacity:(nullable NSNumber *)textOpacity
-    data:(nullable NSDictionary<NSString *, id> *)data {
+    userInfo:(nullable NSDictionary<NSString *, id> *)userInfo {
   FLTPointAnnotationOptions* pigeonResult = [[FLTPointAnnotationOptions alloc] init];
   pigeonResult.geometry = geometry;
   pigeonResult.image = image;
@@ -408,7 +408,7 @@ static id GetNullableObjectAtIndex(NSArray *array, NSInteger key) {
   pigeonResult.textHaloColor = textHaloColor;
   pigeonResult.textHaloWidth = textHaloWidth;
   pigeonResult.textOpacity = textOpacity;
-  pigeonResult.data = data;
+  pigeonResult.userInfo = userInfo;
   return pigeonResult;
 }
 + (FLTPointAnnotationOptions *)fromList:(NSArray *)list {
@@ -449,7 +449,7 @@ static id GetNullableObjectAtIndex(NSArray *array, NSInteger key) {
   pigeonResult.textHaloColor = GetNullableObjectAtIndex(list, 25);
   pigeonResult.textHaloWidth = GetNullableObjectAtIndex(list, 26);
   pigeonResult.textOpacity = GetNullableObjectAtIndex(list, 27);
-  pigeonResult.data = GetNullableObjectAtIndex(list, 28);
+  pigeonResult.userInfo = GetNullableObjectAtIndex(list, 28);
   return pigeonResult;
 }
 + (nullable FLTPointAnnotationOptions *)nullableFromList:(NSArray *)list {
@@ -485,7 +485,7 @@ static id GetNullableObjectAtIndex(NSArray *array, NSInteger key) {
     (self.textHaloColor ?: [NSNull null]),
     (self.textHaloWidth ?: [NSNull null]),
     (self.textOpacity ?: [NSNull null]),
-    (self.data ?: [NSNull null]),
+    (self.userInfo ?: [NSNull null]),
   ];
 }
 @end

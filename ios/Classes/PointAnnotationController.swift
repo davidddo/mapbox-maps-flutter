@@ -978,8 +978,8 @@ extension FLTPointAnnotationOptions {
         if let textOpacity = self.textOpacity {
            annotation.textOpacity = textOpacity.doubleValue
         }
-        if let data = self.data {
-           annotation.data = data
+        if let userInfo = self.userInfo {
+           annotation.userInfo = userInfo
         }
         return annotation
     }
@@ -1061,8 +1061,8 @@ extension FLTPointAnnotation {
     if let textOpacity = self.textOpacity {
        annotation.textOpacity = textOpacity.doubleValue
     }
-    if let data = self.data {
-       annotation.data = data
+    if let userInfo = self.userInfo {
+       annotation.userInfo = userInfo
     }
         return annotation
     }
@@ -1204,7 +1204,7 @@ extension PointAnnotation {
         textHaloColor: textHaloColor,
         textHaloWidth: textHaloWidth,
         textOpacity: textOpacity,
-        data: self.data
+        userInfo: self.userInfo
     )
     }
 }
